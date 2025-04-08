@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface ZwigatoService {
 
-
     //save
     public Zwigato saveZwigato(Zwigato zwigato);
 
@@ -22,5 +21,7 @@ public interface ZwigatoService {
     //getall
     public List<Zwigato> getALLZwigato();
 
+//    getAllZwigato with paging
+    public List<Zwigato> getAllZwigato_Paging(int pageNo, int pageSize);
 
 }

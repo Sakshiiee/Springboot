@@ -1,6 +1,4 @@
 package com.neosoft.SpringBootPagination.Entities;
-
-
 import jakarta.persistence.*;
 
 @Entity

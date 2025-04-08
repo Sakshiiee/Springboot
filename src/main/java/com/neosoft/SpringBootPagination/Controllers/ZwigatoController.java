@@ -43,8 +43,11 @@ public class ZwigatoController {
     }
 
 
-
-
-
+//    get info with paging
+    @GetMapping("/getallwithPaging")
+    public List<Zwigato> getAllZwigato_Paging(@RequestParam(defaultValue = "0") int pageNo,
+                                              @RequestParam(defaultValue = "3") int pageSize){
+        return  zwigatoService.getAllZwigato_Paging(pageNo,pageSize);
+    }
 
 }
