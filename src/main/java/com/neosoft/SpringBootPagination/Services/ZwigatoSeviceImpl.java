@@ -3,8 +3,11 @@ package com.neosoft.SpringBootPagination.Services;
 import com.neosoft.SpringBootPagination.Entities.Zwigato;
 import com.neosoft.SpringBootPagination.Repositories.ZwigatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -40,5 +43,17 @@ public class ZwigatoSeviceImpl implements ZwigatoService {
     @Override
     public List<Zwigato> getALLZwigato() {
         return zwigatoRepository.findAll();
+    }
+
+    @Override
+    public List<Zwigato> getAllZwigato_paging(int pageNo, int pageSize) {
+        PageRequest pageRequest = PageRequest.of(pageNo,pageSize);
+        Page pageResult = zwigatoRepository.findAll(pageRequest);
+
+        if(pageResult.hasContent()){
+            return pageResult.getContent();
+        }else{
+            return new ArrayList<>();
+        }
     }
 }
