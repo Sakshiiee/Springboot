@@ -21,7 +21,6 @@ public interface ZwigatoService {
     //getall
     public List<Zwigato> getALLZwigato();
 
-//    getAllZwigato with paging
+    //getAllZwigato with paging
     public List<Zwigato> getAllZwigato_Paging(int pageNo, int pageSize);
-
 }
