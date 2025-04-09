@@ -58,11 +58,11 @@ public class Movies {
         this.genre = genre;
     }
 
-    public int getTime() {
-        return (int) time;
+    public double getTime() {
+        return (double) time;
     }
 
-    public void setTime(int time) {
+    public void setTime(double time) {
         this.time = time;
     }
 
