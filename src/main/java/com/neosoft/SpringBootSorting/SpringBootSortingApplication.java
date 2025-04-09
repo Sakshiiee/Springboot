@@ -9,5 +9,4 @@ public class SpringBootSortingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootSortingApplication.class, args);
 	}
-
 }

@@ -40,4 +40,16 @@ public class MoviesServiceImpl implements MoviesService{
     public List<Movies> getAllMovies() {
         return moviesRepository.findAll();
     }
+
+    @Override
+    public List<Movies> getMoviesByNameAndbyActor(String name, String actor) {
+        return moviesRepository.findByNameAndActor(name, actor);
+    }
+
+    @Override
+    public List<Movies> getMoviesByName(String name) {
+        return moviesRepository.findByName(name);
+    }
+
+
 }

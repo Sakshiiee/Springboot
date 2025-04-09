@@ -40,6 +40,14 @@ public class MoviesController {
         return moviesService.getAllMovies();
     }
 
-
+    @GetMapping("/getMovie/{name}")
+    public List<Movies> getMoviesByName(@PathVariable("name") String name){
+       return moviesService.getMoviesByName(name);
+    }
+    @GetMapping("/getNameActor/{name}/{actor}")
+    public List<Movies> getMoviesByNameAndbyActor(@PathVariable("name") String name,
+                                                 @PathVariable("actor") String actor){
+       return moviesService.getMoviesByNameAndbyActor(name, actor);
+    }
 
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MoviesService {
 
-    //save
+    //
     public Movies saveMovies(Movies movies);
 
     //get
@@ -21,4 +21,11 @@ public interface MoviesService {
     //getAll
     public List<Movies> getAllMovies();
 
+    //get movie
+    public List<Movies> getMoviesByName(String name);
+
+    //get a list of movie based on name
+    public List<Movies> getMoviesByNameAndbyActor(String name, String actor);
+
+    //get actors
 }
