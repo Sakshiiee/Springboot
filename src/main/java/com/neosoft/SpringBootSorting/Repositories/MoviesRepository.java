@@ -18,4 +18,12 @@ public interface MoviesRepository extends JpaRepository<Movies, Integer> {
 
     @Query(value = "select * from movies m where name=?1 and actor=?2",nativeQuery = true)
     public List<Movies> findByNameAndActor(String name,String actor);
+
+    @Query(value = "select * from movies m where actor=?1",nativeQuery = true)
+    public  List<Movies> findByActor(String actor);
+
+    @Query(value = "select * from movies m where platform= netflix and isAvaiable = true",nativeQuery = true)
+    public List<Movies> findMoviesAvailableOnNetflix(String platform, boolean isAvailable);
+
 }
+

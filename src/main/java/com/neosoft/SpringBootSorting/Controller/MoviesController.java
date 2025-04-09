@@ -50,4 +50,18 @@ public class MoviesController {
        return moviesService.getMoviesByNameAndbyActor(name, actor);
     }
 
+    public List<Movies> findMoviesAvailableOnNetflix(@PathVariable("platform") String platform,
+                                                     @PathVariable(required = true) boolean isAvailable){
+        return moviesService.findMoviesAvailableOnNetflix(platform, isAvailable);
+
+    }
+
+
+    @GetMapping("/getActor/{actor}")
+    public List<Movies> getMoviesByActor(@PathVariable("actor") String actor){
+       return moviesService.getMoviesByActor(actor);
+    }
+
+
+
 }

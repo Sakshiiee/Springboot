@@ -28,4 +28,9 @@ public interface MoviesService {
     public List<Movies> getMoviesByNameAndbyActor(String name, String actor);
 
     //get actors
+    public List<Movies> getMoviesByActor(String actor);
+
+    //movies is available and it is on netflix platform
+    public List<Movies> findMoviesAvailableOnNetflix(String platform, boolean isAvailable);
 }
+

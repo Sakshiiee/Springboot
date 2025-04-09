@@ -47,6 +47,16 @@ public class MoviesServiceImpl implements MoviesService{
     }
 
     @Override
+    public List<Movies> getMoviesByActor(String actor) {
+        return moviesRepository.findByActor(actor);
+    }
+
+    @Override
+    public List<Movies> findMoviesAvailableOnNetflix(String platform, boolean isAvailable) {
+        return moviesRepository.findMoviesAvailableOnNetflix(platform, isAvailable);
+    }
+
+    @Override
     public List<Movies> getMoviesByName(String name) {
         return moviesRepository.findByName(name);
     }
